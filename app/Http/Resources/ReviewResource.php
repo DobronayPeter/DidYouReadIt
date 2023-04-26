@@ -2,6 +2,8 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Book;
+use App\Models\User;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ReviewResource extends JsonResource
@@ -16,8 +18,8 @@ class ReviewResource extends JsonResource
     {
         return [
             "id" => $this->id,
-            "user" => new UserResource($this->user()),
-            "book" => new BookResource($this->book()),
+            "user" => new UserResource($this->user),
+            "book" => new BookResource($this->book),
             "rating" => $this->rating,
             "description" => $this->description,
             "progress" => $this->progress,

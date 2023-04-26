@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\BookResource;
-use App\Models\Book;
+use App\Http\Resources\UserResource;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class BookController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        return BookResource::collection(Book::all());
+        return UserResource::collection(User::all());
     }
 
     /**
@@ -37,7 +37,7 @@ class BookController extends Controller
      */
     public function show($id)
     {
-        return new BookResource(Book::findOrFail($id));
+        return new UserResource(User::findOrFail($id));
     }
 
     /**
