@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('author', 50);
             $table->string('description', 500)->nullable();
             //$table->string('picture', 50)->nullable();
+            //$table->json('genre');
         });
     }
 

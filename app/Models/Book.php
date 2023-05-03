@@ -8,6 +8,7 @@ class Book extends Model
 {
     public $timestamps = false;
     protected $guarded = ['id'];
+    //protected $casts = ['genre' => 'array'];
 
     public function reviews() {
         return $this->hasMany(Review::class);
