@@ -34,7 +34,7 @@
 
    - GitHubról letöltés:
 
-     1. Látogassunk el a **[REPO LINK]** oldalra, majd a zöld `Code` gomb megnyomása után kattintsunk a `Download ZIP` opcióra
+     1. Látogassunk el a https://github.com/DobronayPeter/DidYouReadIt oldalra, majd a zöld `Code` gomb megnyomása után kattintsunk a `Download ZIP` opcióra
      
      2. Mentsük el egy belső meghajtón lévő* tetszőleges helyre a ZIP fájlt, majd csomagoljuk ki.
      
@@ -45,7 +45,7 @@
      2. Nyissuk meg a Git Bash-t, és a
         
         ```bash
-        git clone **[REPO LINK]** "projekt_helye"
+        git clone https://github.com/DobronayPeter/DidYouReadIt "projekt_helye"
         ```
         
         parancs segítségével -- ahol a `projekt_helye` egy tetszőleges útvonal egy belső meghajtón*, ahová a projektet menteni szeretnénk -- töltsük le a projektet.
