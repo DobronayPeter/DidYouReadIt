@@ -117,7 +117,13 @@
    php artisan key:generate
    ```
 
-10. Lépjünk bele a `<projektmappa>/public/book-webapp` mappába
+10. Futtassuk az adatbázis-migrációkat:
+    
+    ```fish
+    php artisan migrate
+    ```
+
+11. Lépjünk bele a `<projektmappa>/public/book-webapp` mappába
 
     ```fish
     cd public/book-webapp/
@@ -129,7 +135,7 @@
     npm install
     ```
 
-11. Indítsuk el a fejlesztői szervert a következő parancs kiadásával:
+12. Indítsuk el a fejlesztői szervert a következő parancs kiadásával:
     
     ```fish
     npm run dev
@@ -150,6 +156,3 @@ https://github.com/rcsnjszg/laravel-alap
 
 - Vue 3 projekt scaffolding eszköz Vite alapon  
 https://github.com/ignaczdominik/create-vue-alap-idb
-
-
-? "A felhasznált anyagokról jogi nyilatkozat a dokumentációban" (licenszek szövegének bemásolása?)
