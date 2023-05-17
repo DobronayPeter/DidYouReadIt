@@ -166,11 +166,37 @@ A _Did You Read It?_ projekt abból a célból készült, hogy a felhasználó s
    - Módosításkor az adott rekord létezik-e már a táblában
    - Bevitelkor még nem létezik a rekord
 
+Model | Controller | HTTP Method | Model URL | Parameters | Description
+---|---|---|---|---|---
+Review | ReviewController | GET | /review | | Visszaadja az összes kritikát
+Review | ReviewController | GET | /review/{id} | id | Visszaad egy kritikát
+Review | ReviewController | POST | /review | | Feltölt egy új kritikát
+Review | ReviewController | PUT | /review/{id} | id | Módosít egy kritikát
+Review | ReviewController | DELETE | /review/{id} | id | Töröl egy kritikát
+
+Model | Controller | HTTP Method | Model URL | Parameters | Description
+---|---|---|---|---|---
+Book | BookController | GET | /book | | Visszaadja az összes könyvet
+Book | BookController | GET | /book/{id} | id | Visszaad egy könyvet
+Book | BookController | POST | /book | | Feltölt egy új könyvet
+Book | BookController | PUT | /book/{id} | id | Módosít egy könyvet
+Book | BookController | DELETE | /book/{id} | id | Töröl egy könyvet
+
+Model | Controller | HTTP Method | Model URL | Parameters | Description
+---|---|---|---|---|---
+User | UserController | GET | /user | | Visszaadja az összes felhasználót
+User | UserController | GET | /user/{id} | id | Visszaad egy felhasználót
+User | UserController | POST | /user | | Feltölt egy új felhasználót
+User | UserController | PUT | /user/{id} | id | Módosít egy felhasználót
+User | UserController | DELETE | /user/{id} | id | Töröl egy felhasználót
+
+
 ## 6. Adatbázis
    - 3 tábla: users, books, reviews
    - A táblákban vannak mintaadatok
    - Backendből controllereken keresztül elérhetőek az adatok
 
+ ![táblák képe](tables.png)
 ## 7. Teszteredmények dokumentációja:
    - A REST API Postmannal manuálisan leteszteltük mind az 5 CRUD-ot mindegyik táblával hogy biztosítsuk a hibamentes működést.
 
