@@ -9,10 +9,10 @@
 # Did You Read It
 
 ## 1. A Did You Read It célja:
-
+A _Did You Read It?_ projekt abból a célból készült, hogy a felhasználó számára rendelkezésre álljon egy olyan szoftver amivel kényelmesen nyomon tudja követni mely könyveket olvasta már és rendszerezni tudja azokat.
 ## 2. Rendszerkövetelmények:
 
-- Minimum:
+- Minimum operációs rendszer:
 
   - [Windows](https://docs.docker.com/desktop/install/windows-install/#system-requirements)
 
@@ -143,13 +143,39 @@
      
     A Did You Read It-et mostantól el tudjuk érni a kijelzett webcímen amikor a szerver fut.
 
-## 4. Komponensek leírása:
+## 4. A szoftver használati bemutatása (ha lenne frontend):
+1. Nyissa meg a böngészőt
+2. Írja be a webcímet amelyen elérhető a webes felület (localhost + web docker konténeren jelzett portszám)
+3. Jelentkezzen be
+4. Kattintson a 'New Item' gombra
+5. Töltse ki az űrlapot, ha a könyv még nincs az adatbázisban adjon hozzá sajátot (lokálisan lesz tárolva)
+6. A könyv (és kritika) mostantól benne lesz a My List fülben
+7. A community fülben más felhasználók legutóbbi publikus kritikáit nézheti meg
 
-## 5. A szoftver használati bemutatása:
+## 5. REST API leírása:
+1. Milyen adatok elérhetőek?
+   - Felhasználók nevei és id-je
+   - Könyvek, kritikák lényeges adatai
+   - A users és books táblákat a review vagyis felhasználók által kritika köti össze. 
+      - Ezt a felhasználó állíthatja publikusra vagy privátra, a jövőben a belépett felhasználó csak a saját és mások publikus kritikáit láthatja.
+   - A felhasználónak meg kell jelölnie hogy hol tart a könyvben (el szeretné olvasni, éppen olvassa, elolvasta vagy abbahagyta ha rossz volt)
+2. CRUD
+   - Create, Read, Update, Delete mind meg van valósítva minden táblára. A jövőben csak megfelelő jogosultságú felhasználó hajthatja végre a megfelelő műveleteket.
+3. Validáció
+   - Az adatok bemenetkor és módosításkor ellenőrizve vannak helyesség szempontjából
+   - Módosításkor az adott rekord létezik-e már a táblában
+   - Bevitelkor még nem létezik a rekord
 
-## 6. Teszteredmények dokumentációja:
+## 6. Adatbázis
+   - 3 tábla: users, books, reviews
+   - A táblákban vannak mintaadatok
+   - Backendből controllereken keresztül elérhetőek az adatok
 
-## 7. Felhasznált anyagok:
+## 7. Teszteredmények dokumentációja:
+   - A REST API Postmannal manuálisan leteszteltük mind az 5 CRUD-ot mindegyik táblával hogy biztosítsuk a hibamentes működést.
+
+## 8. Egyéb fejlesztési adatok
+### Felhasznált anyagok:
 
 - Laravel 9 alap projekt Docker alapon   
 https://github.com/rcsnjszg/laravel-alap

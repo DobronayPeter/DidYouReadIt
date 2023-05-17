@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Review extends Model
 {
     public $timestamps = false;
-    protected $guarded = ['id'];
+    protected $guarded = [];
     //protected $hidden = ['public'];
 
     public function user() {

@@ -24,6 +24,7 @@ class StoreBookRequest extends FormRequest
     public function rules()
     {
         return [
+            "id" => "unique:books,id",
             "title" => "required|string|max:100",
             "author" => "required|string|max:50",
             "description" => "nullable|string|max:500",
