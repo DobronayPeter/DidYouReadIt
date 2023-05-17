@@ -7,7 +7,7 @@
       <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
       <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
     </ul>
-    <p class="text-center text-white">© {{ currentYear }} Company, Inc</p>
+    <p class="text-center text-white">© {{ currentYear }} Kiss Kinga, Dobronay Péter, Németh Kristóf</p>
   </footer>
 </template>
 
